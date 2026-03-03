@@ -6,6 +6,7 @@ HW disk for tms
 <br>
 <img width="677" height="317" alt="image" src="https://github.com/user-attachments/assets/844440cf-9cd7-402f-87cf-ff5b244bf5b1" />
 <br><br><br>
+
 1. Создана VG `tms-vg` с помощью команды `sudo vgcreate tms-vg /dev/sda1 /dev/sdb2`
   - созданы LV с помощью команды
   - `sudo lvcreate -n data -L +5G tms-vg` - data

@@ -70,7 +70,7 @@ HW disk for tms
    - файл `bigdata.txt` изчез, после монтировния файлы `file1.txt`, `file2.txt` появились снова
    - данные после отмонтирования не теряются
    - при отмонтировнии повторно `/opt/tests`, файл `bigdata.txt` появился, монтирование не удаляет существкющие файлы
-   - 
+   
 <img width="785" height="592" alt="image" src="https://github.com/user-attachments/assets/4b30cf9d-1bfd-4aa4-a382-a7631225f9de" />
 
 

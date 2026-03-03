@@ -14,4 +14,45 @@ HW disk for tms
 <img width="556" height="435" alt="image" src="https://github.com/user-attachments/assets/1e90bc23-954b-4fb0-b0d5-28908f5a2b20" />
 
 2. Изменена файловая система - `mkfs.xfs /dev/tms-vg/data`, `mkfs.ext4 /dev/tms-vg/bkp`
-3. 
+
+<img width="825" height="507" alt="image" src="https://github.com/user-attachments/assets/81dfffba-90e6-45a7-86bd-c755f44ca876" />
+
+3. Созданы папки `data` и `backaups`
+  - выполнено понтирование - `sudo mount`
+  - вывод `df -Th`
+
+<img width="824" height="439" alt="image" src="https://github.com/user-attachments/assets/440f4cc0-d034-4624-9fc4-fa46bfb9e4e2" />
+
+4. Добавлен '/dev/sda2' в LV `tms-vg'
+
+<img width="775" height="232" alt="image" src="https://github.com/user-attachments/assets/794c86f7-aa75-4c3f-b98b-9773645bc05d" />
+
+5. Расширен LV `data`
+
+<img width="861" height="278" alt="image" src="https://github.com/user-attachments/assets/739ec3e9-d9ee-4345-af67-eb780605de83" />
+
+6. Создана VG `reserved` с помощью команды `sudo vgcreate reserved /dev/sdb1`
+
+<img width="829" height="385" alt="image" src="https://github.com/user-attachments/assets/40d9bdc8-d0b6-4c60-8f9c-b7683c3f272c" />
+
+7. Создана LV `other`
+
+<img width="823" height="278" alt="image" src="https://github.com/user-attachments/assets/1497804d-2b80-4f7a-88a0-52d336c9ffed" />
+
+8. Создана папка и выполнено монтирование в `/opt/tests`
+
+<img width="823" height="641" alt="image" src="https://github.com/user-attachments/assets/f5c6a85f-f2fe-4fc7-bf7b-1d963ce1ebb0" />
+
+9. Созданы файлы `file1.txt`, `file2.txt`
+   - выполнена проверка файлов `ls`
+   - выполнено отмонтирование `/opt/tests`
+   - создан файл `bigdata.txt`
+   - выполнено монтирование при существующем файле `bigdata.txt`
+   - файл `bigdata.txt` изчез, после монтировния файлы `file1.txt`, `file2.txt` появились снова
+   - данные после отмонтирования не теряются
+   - при отмонтировнии повторно `/opt/tests`, файл `bigdata.txt` появился, монтирование не удаляет существкющие файлы
+   - 
+<img width="785" height="592" alt="image" src="https://github.com/user-attachments/assets/4b30cf9d-1bfd-4aa4-a382-a7631225f9de" />
+
+
+

@@ -11,7 +11,9 @@ HW disk for tms
   - созданы LV с помощью команды
   - `sudo lvcreate -n data -L +5G tms-vg` - data
   - `sudo lvcreate -n bkp -l +100%FREE tms-vg` - bkp
+    
 <br>
+
 <img width="556" height="435" alt="image" src="https://github.com/user-attachments/assets/1e90bc23-954b-4fb0-b0d5-28908f5a2b20" />
 <br><br><br>
 2. Изменена файловая система - `mkfs.xfs /dev/tms-vg/data`, `mkfs.ext4 /dev/tms-vg/bkp`
@@ -23,11 +25,15 @@ HW disk for tms
 3. Созданы папки `data` и `backaups`
   - выполнено монтирование - `sudo mount`
   - вывод `df -Th`
+
 <br>
+
 <img width="824" height="439" alt="image" src="https://github.com/user-attachments/assets/440f4cc0-d034-4624-9fc4-fa46bfb9e4e2" />
+
 <br>
 <br>
 <br>
+
 4. Добавлен `/dev/sda2` в LV `tms-vg`
 <br>
 <img width="775" height="232" alt="image" src="https://github.com/user-attachments/assets/794c86f7-aa75-4c3f-b98b-9773645bc05d" />

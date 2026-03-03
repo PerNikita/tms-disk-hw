@@ -15,13 +15,17 @@ HW disk for tms
 <br>
 
 <img width="556" height="435" alt="image" src="https://github.com/user-attachments/assets/1e90bc23-954b-4fb0-b0d5-28908f5a2b20" />
-<br><br><br>
+<br>
+<br>
+<br>
+
 2. Изменена файловая система - `mkfs.xfs /dev/tms-vg/data`, `mkfs.ext4 /dev/tms-vg/bkp`
 <br>
 <img width="825" height="507" alt="image" src="https://github.com/user-attachments/assets/81dfffba-90e6-45a7-86bd-c755f44ca876" />
 <br>
 <br>
 <br>
+
 3. Созданы папки `data` и `backaups`
   - выполнено монтирование - `sudo mount`
   - вывод `df -Th`
@@ -40,30 +44,35 @@ HW disk for tms
 <br>
 <br>
 <br>
+
 5. Расширен LV `data`
 <br>
 <img width="861" height="278" alt="image" src="https://github.com/user-attachments/assets/739ec3e9-d9ee-4345-af67-eb780605de83" />
 <br>
 <br>
 <br>
+
 6. Создана VG `reserved` с помощью команды `sudo vgcreate reserved /dev/sdb1`
 <br>
 <img width="829" height="385" alt="image" src="https://github.com/user-attachments/assets/40d9bdc8-d0b6-4c60-8f9c-b7683c3f272c" />
 <br>
 <br>
 <br>
+
 7. Создана LV `other`
 <br>
 <img width="823" height="278" alt="image" src="https://github.com/user-attachments/assets/1497804d-2b80-4f7a-88a0-52d336c9ffed" />
 <br>
 <br>
 <br>
+
 8. Создана папка и выполнено монтирование в `/opt/tests`
 <br>
 <img width="823" height="641" alt="image" src="https://github.com/user-attachments/assets/f5c6a85f-f2fe-4fc7-bf7b-1d963ce1ebb0" />
 <br>
 <br>
 <br>
+
 9. Созданы файлы `file1.txt`, `file2.txt`
    - выполнена проверка файлов `ls`
    - выполнено отмонтирование `/opt/tests`
